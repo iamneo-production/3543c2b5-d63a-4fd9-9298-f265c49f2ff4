@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 35%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+</style>
+</head>
+
+<body>
+  <div class="w3-bar w3-black">
+    <!--<p class="w3-bar-item">PRANAV DATA</p>-->
+    <a href="logout" ONCLICK="alert('you have successfully logout !!')" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% " >Logout</a>
+    <a href=" # " class="w3-bar-item w3-button w3-xlarge" style="width:16% ">WOMEN IN TECH</a>
+    <a href="profile" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">MyProfile</a>
+    <a href="viewblogpost" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">viewblog</a>
+    <a href="viewjobpost" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">viewjob</a>
+    <a href="chat" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">chat</a>
+    <a href="home" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">home</a>
+</div>
+<div class="row">
+  <% datas.forEach((data)=> { %>
+  <div class="column">
+    <div class="card">
+        <header class="w3-container w3-purple">
+            <h1><%= data.header %></h1>
+        </header>
+        <img src= <%= data.imagelink %> alt="Alps" style="width:100%">
+        <footer class="w3-container w3-purple">
+            <h5> <%= data.description %> </h5>
+            <i><h6 style = "padding-right: 60%;">author <%= data.author %>(<%= data.emailid%>)</h6>
+            <h6 style = "padding-right: 60%;"><%= data.date%></h6></i>
+          </footer>
+
+    </div>
+</div>
+<% }) %>
+
+</div>
+
+</body>
+</html>

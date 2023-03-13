@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #bottom {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                margin-left : 40%;
+            }
+        </style>
+    </head>
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <div class="w3-bar w3-black">
+        <!--<p class="w3-bar-item">PRANAV DATA</p>-->
+        <a href="logout" ONCLICK="alert('you have successfully logout !!')" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% " >Logout</a>
+        <a href=" # " class="w3-bar-item w3-button w3-xlarge" style="width:16% ">WOMEN IN TECH</a>
+        <a href="profile" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">MyProfile</a>
+        <a href="viewblogpost" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">viewblog</a>
+        <a href="viewjobpost" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">viewjob</a>
+        <a href="chat" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">chat</a>
+        <a href="home" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">home</a>
+    </div>
+    <div class="w3-container w3-card-4" style = "overflow-y: auto;float: left;height : 60vh;width:40%;margin-top: 5%;margin-left: 5%;">
+        <h3 style="text-align: center;"><b>enter job post details</b></h3>
+        <form method="post" action="/onaddjobpost" id="jobpostform" style="max-width: 955px;">
+            <p>role</p>
+            <input type="text" name="role" class="w3-input w3-border " placeholder="Enter role" required>
+            <p>company name</p>
+            <input type="text" name="company" class="w3-input w3-border" placeholder="Enter company name " required>
+            <p>state</p>
+            <input type="text" name="state" class="w3-input w3-border" placeholder="Enter state " required>
+            <p>country</p>
+            <input type="text" name="country" class="w3-input w3-border" placeholder="Enter country " required>
+            <p>duration</p>
+            <input type="text" name="duration" class="w3-input w3-border" placeholder="Enter duration in months " required>
+            <p>salary</p>
+            <input type="text" name="salary" class="w3-input w3-border" placeholder="Enter salary in rupees " required>
+            <p>Requirements</p>
+            <input type="textbox" name="requirements" class="w3-input w3-border" placeholder="Enter Requirements " required>
+            <p>skills</p>
+            <input type="textbox" name="skills" class="w3-input w3-border" placeholder="Enter skills seperated by ','" required>
+            <p>apply link</p>
+            <input type="url" name="applylink" class="w3-input w3-border" placeholder="Enter apply link " required>
+            <button type="submit " value="Submit " class="w3-btn w3-blue" ONCLICK="alert('successfully submitted job post')"><a>add job post</a></button>
+        </form>
+    </div>
+    <div class="w3-container w3-card-4" style = "overflow-y: auto;float: right;height : 60vh;width:40%;margin-top: 5%;margin-right: 5%;">
+        <h3 style="text-align: center;"><b>enter blog details</b></h3>
+        <form method="post" action="/onaddblogpost" id="blogpostform" style="max-width: 955px;">
+            <p>header</p>
+            <input type="text" name="header" class="w3-input w3-border " placeholder="Enter header" required>
+            <p>post image link</p>
+            <input type="url" name="imagelink" class="w3-input w3-border" placeholder="post image link">
+            <p>description</p>
+            <input type="textbox" name="description" class = "w3-input w3-border" placeholder="Enter description">
+            <p>author name</p>
+            <input type="text" name="author" class = "w3-input w3-border" placeholder="Enter author">
+            <p>date</p>
+            <input type="date" name="date" class = "w3-input w3-border" placeholder="Enter data">
+            <p>email</p>
+            <input type="email" name="emailid" class = "w3-input w3-border" placeholder="Enter email">
+            <button type="submit " value="Submit" class="w3-btn w3-blue" ONCLICK="alert('successfully submitted blog')"><a>add blog post</a></button>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2018.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            -ms-overflow-style: scrollbar;
+            overflow-style: scrollbar;
+            background-color: #DDD;
+        }
+        
+        main {
+            max-width: 700px;
+            margin: auto;
+            height: 100vh;
+            background-color: #DDD;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-box-container {
+            margin: 0;
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            height: 0;
+        }
+        
+        .chat-box-header {
+            display: block;
+            text-align: center;
+        }
+        
+        .chat-box {
+            margin: 4px 4px 4px 4px;
+            border: 2px solid black;
+            flex-grow: 1;
+            background-color: #FFF;
+            overflow-y: scroll;
+        }
+        
+        .chat-box p {
+            margin: 0;
+            padding: 6px;
+            font-size: 26px;
+        }
+        
+        .ai-person-container {
+            display: block;
+            overflow: auto;
+        }
+        
+        .ai,
+        .person {
+            overflow: auto;
+            margin: 4px;
+            border: 2px solid black;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        
+        .ai {
+            text-align: left;
+            margin-right: 36px;
+            border-color: red;
+            float: left;
+            border-bottom-left-radius: 0px;
+        }
+        
+        .person {
+            text-align: left;
+            margin-left: 36px;
+            border-color: blue;
+            float: right;
+            border-bottom-right-radius: 0px;
+        }
+        
+        .ai-date,
+        .person-date {
+            font-size: 10px;
+            clear: both;
+        }
+        
+        .ai-date {
+            float: left;
+            margin-left: 6px;
+        }
+        
+        .person-date {
+            float: right;
+            margin-right: 6px;
+        }
+        
+        .chat-input-container {
+            position: relative;
+            height: 60px;
+            width: 100%;
+            display: flex;
+            bottom: 0;
+            align-items: center;
+            justify-content: center;
+            overflow: auto;
+        }
+        
+        .chat-input {
+            height: 40px;
+            width: auto;
+            display: inline-block;
+            flex-grow: 1;
+            padding: 2px 2px 2px 2px;
+            margin: 0 4px 0 4px;
+            font-size: 32px;
+            border: 2px solid black;
+        }
+        
+        .chat-input:focus {
+            outline: 0;
+        }
+        
+        .chat-submit {
+            width: 70px;
+            height: 47px !important;
+            padding: 2px 2px 2px 2px;
+            margin-right: 4px;
+            border: 2px solid black;
+            background-color: #69AAFF;
+            font-size: 18px;
+        }
+        
+        .chat-submit:hover {
+            cursor: pointer;
+            background-color: #80BBFF;
+        }
+        
+        .chat-submit:focus {
+            outline: 0;
+        }
+        
+        @media screen and (max-width: 480px) {
+            .chat-box p {
+                font-size: 30px;
+            }
+            .chat-input {
+                width: 60%;
+                float: left;
+                font-size: 28px;
+            }
+            .chat-submit {
+                float: right;
+            }
+        }
+        
+        .time-left {
+            float: left;
+            color: #999;
+        }
+        
+        .container {
+            border: 2px solid #dedede;
+            background-color: #edb6eb;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .darker {
+            border-color: #ccc;
+            background-color: #ddd;
+        }
+    </style>
+
+</head>
+<div class="w3-bar w3-black">
+    <!--<p class="w3-bar-item">PRANAV DATA</p>-->
+    <a href="logout" ONCLICK="alert('you have successfully logout !!')" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% " >Logout</a>
+    <a href=" # " class="w3-bar-item w3-button w3-xlarge" style="width:16% ">WOMEN IN TECH</a>
+    <a href="profile" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">MyProfile</a>
+    <a href="viewblogpost" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">viewblog</a>
+    <a href="viewjobpost" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">viewjob</a>
+    <a href="chat" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">chat</a>
+    <a href="home" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">home</a>
+</div>
+<main id="main">
+    <div class="chat-box-container">
+        <h1 class="chat-box-header">GROUP CHAT</h1>
+        <div class="chat-box">
+            <% chats.forEach((chat)=> { %>
+                <div class="w3-card" style="margin: 10%;">
+                    <h6>user :
+                        <%= chat.username %>
+                    </h6>
+                    <p>
+                        <%= chat.msg %>
+                    </p>
+                    <span class="time-left"><%= chat.time %></span>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+    <form method="post" action="sendchat">
+        <div class="chat-input-container">
+            <input class="chat-input" type="text" name="msg">
+            <button type="submit" class="chat-submit" type="button" name="submit">Submit</button>
+        </div>
+    </form>
+
+</main>

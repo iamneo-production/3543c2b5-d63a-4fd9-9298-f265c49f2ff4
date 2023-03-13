@@ -1,0 +1,116 @@
+<html>
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(https://www.lawyer-monthly.com/Lawyer-Monthly/wp-content/uploads/2021/03/iStock-1280477852.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.box2 {
+    width: 30%;
+    position: absolute;
+    background-image: linear-gradient(to bottom right, rgb(134, 107, 202), rgb(134, 51, 115));
+    left: 60%;
+    top: 10%;
+    padding-left: 1%;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: serif;
+    color: rgb(19, 17, 17);
+}
+
+.box2 p {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(8, 6, 6);
+}
+
+.box2 input {
+    width: 90%;
+    height: 5%;
+    margin-bottom: 40px;
+}
+
+.box2 input:is(:focus,
+ :valid) {
+    border-bottom-color: rgb(19, 17, 17);
+}
+
+.box2 input[type="text"],
+input[type="password"] {
+    font-size: 20px;
+    height: 27px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+}
+
+.button a {
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    margin-left: 32%;
+    margin-bottom: 20px;
+    padding: 7px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 70px;
+}
+
+.buttons a:hover {
+    text-decoration: none;
+    background-color: gray;
+}
+
+.box2 input .i {
+    left: 0;
+}
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <div class="w3-bar w3-black">
+        <a href=" # " class="w3-bar-item w3-button w3-xlarge" style="width:16% ">WOMEN IN TECH</a>
+    </div>
+    <div class="w3-card-4 box2 w3-round-xlarge">
+        <h1>Register</h1>
+        <form method="post" action="/onadminsignup" id="nameform">
+            <p>Username</p>
+            <input type="text" name="name" placeholder="Enter username" required>
+            <p>email</p>
+            <input type="text" name="email" placeholder="Enter email address" required>
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <p>Confirm Password</p>
+            <input type="password" name="confirmpassword" placeholder="Re-enter Password" required>
+            <p>company </p>
+            <input type="text" name="company" class="w3-input w3-border" placeholder="Enter company name" required>
+            <p>role</p>
+            <input type="text" name="role" placeholder="Enter role" required>
+            <p>idcard</p>
+            <input type="url" name="idcard" placeholder="Enter idcaed" required>
+            
+            <button type="submit" class="w3-circle w3-btn" form="nameform" value="Submit" style="background-color: #ebebe1;margin-left: 30%;font-size: 18px;border-radius: 15%;">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

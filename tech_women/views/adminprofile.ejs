@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+    <div class="w3-bar w3-black">
+        <!--<p class="w3-bar-item">PRANAV DATA</p>-->
+        <a href="logout" ONCLICK="alert('you have successfully logout !!')" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% " >Logout</a>
+        <a href=" # " class="w3-bar-item w3-button w3-xlarge" style="width:16% ">WOMEN IN TECH</a>
+        <a href="profile" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">MyProfile</a>
+        <a href="viewblogpost" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">viewblog</a>
+        <a href="viewjobpost" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">viewjob</a>
+        <a href="chat" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">chat</a>
+        <a href="home" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">home</a>
+    </div>
+
+    <style>
+        body {
+            background-color: rgb(70, 130, 148);
+        }
+    </style>
+
+    <div class="w3-center" style="color: white; font-size: 200px;">
+        <h1><b><u>PROFILE</u></b></h1>
+    </div>
+
+    <div class="w3-card-4 w3-center w3-white w3-round-xlarge" style="width: 54%; margin-left: 23%; margin-top: 5%; ">
+        <img src="<%= userdata.idcard %>" alt="Alps" width="32%">
+        <div class="w3-container w3-center">
+            <div class="w3-sand w3-hover-shadow w3-center w3-round-xlarge" style="margin-bottom:5%; margin-left:5%; margin-right:5%;">
+                <div class="stats">
+                    <div class="col-4">
+                        <h4><b>username</b></h4>
+                        <p>
+                            <%= userdata.name %>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <h4><b>role</b></h4>
+                        <p>
+                            <%= userdata.role%>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <h4><b>E-mail ID</b></h4>
+                        <p>
+                            <%= userdata.email %>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <h4><b>reward points</b></h4>
+                        <p>
+                            <%= userdata.reward %>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

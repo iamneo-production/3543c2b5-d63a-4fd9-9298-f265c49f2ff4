@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stats .col-4 {
+    width: 15rem;
+    text-align: center;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2018.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: url(https://i.makeagif.com/media/10-18-2019/s50nms.gif);
+            background-size: cover;
+        }
+        
+        .row {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-column-gap: 10px;
+        }
+        
+        .item {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        
+        .b {
+            padding: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            gap: 50px 100px;
+            margin: 20%;
+        }
+        
+        .grid-item {
+            width: fit-content;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            background-color: rgba(194, 187, 222, 0.664);
+            font-size: 30px;
+            text-align: center;
+            padding: 2%;
+        }
+    </style>
+
+</head>
+
+<body>
+  <div class="w3-bar w3-black">
+    <!--<p class="w3-bar-item">PRANAV DATA</p>-->
+    <a href="logout" ONCLICK="alert('you have successfully logout !!')" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% " >Logout</a>
+    <a href=" # " class="w3-bar-item w3-button w3-xlarge" style="width:16% ">WOMEN IN TECH</a>
+    <a href="profile" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">MyProfile</a>
+    <a href="viewblogpost" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">viewblog</a>
+    <a href="viewjobpost" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">viewjob</a>
+    <a href="chat" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">chat</a>
+    <a href="home" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">home</a>
+</div>
+    <div class="grid-container">
+        <% datas.forEach((data)=> {%>
+            <div class="grid-item">
+                <h2>
+                    <%= data.role %>
+                </h2>
+                <p>
+                    <%=data.company %>
+                </p>
+                <p>
+                    <%= data.state %> ,
+                        <%= data.country %>
+                </p>
+                <p>
+                    <%= data.salary %>
+                </p>
+                <p>
+                    <%= data.skills  %>
+                </p>
+                <p>
+                    <%= data.requirements  %>
+                </p>
+                <button class="w3-button w3-black"><a href = "<%= data.applylink %>">apply</a>
+            </button>
+            </div>
+            <% }) %>
+    </div>
+</body>
+
+</html>

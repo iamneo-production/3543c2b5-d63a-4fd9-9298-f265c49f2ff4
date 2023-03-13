@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+    <div class="w3-bar w3-black">
+        <!--<p class="w3-bar-item">PRANAV DATA</p>-->
+        <a href="logout" ONCLICK="alert('you have successfully logout !!')" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% " >Logout</a>
+        <a href=" # " class="w3-bar-item w3-button w3-xlarge" style="width:16% ">WOMEN IN TECH</a>
+        <a href="profile" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">MyProfile</a>
+        <a href="viewblogpost" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">viewblog</a>
+        <a href="viewjobpost" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">viewjob</a>
+        <a href="chat" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">chat</a>
+        <a href="home" class="w3-bar-item w3-button w3-right w3-xlarge " style="width:10% ">home</a>
+    </div>
+
+    <style>
+        body {
+            /*             background-image: url('data:image/jpeg;base64,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');
+            background-repeat: none;
+            background-size: cover; */
+            background-color: rgb(70, 130, 148);
+        }
+    </style>
+
+    <div class="w3-center" style="color: white; font-size: 200px;">
+        <h1><b><u>PROFILE</u></b></h1>
+    </div>
+
+    <div class="w3-card-4 w3-center w3-white w3-round-xlarge" style="width: 54%; margin-left: 23%; margin-top: 5%; ">
+        <div class="w3-container w3-center">
+            <div class="w3-sand w3-hover-shadow w3-center w3-round-xlarge" style="margin-bottom:5%; margin-left:5%; margin-right:5%;">
+                <div class="stats">
+                    <div class="col-4">
+                        <h4><b>username</b></h4>
+                        <p>
+                            <%= userdata.name %>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <h4><b>email id</b></h4>
+                        <p>
+                            <%= userdata.email%>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <h4><b>skills</b></h4>
+                        <p>
+                            <%= userdata.skills%>
+                        </p>
+                    </div>
+                     <div class="col-4">
+                        <h4><b>education</b></h4>
+                        <p>
+                            <%= userdata.degree%>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <h4><b>stream</b></h4>
+                        <p>
+                            <%= userdata.stream%>
+                        </p>
+                    </div> 
+                    <div class="col-4">
+                        <h4><b>timeline</b></h4>
+                        <p>
+                            <%= userdata.startyear %> - <%= userdata.endyear %>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <h4><b>grade</b></h4>
+                        <p>
+                             <%= userdata.grade %>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <h4><b>total experience</b></h4>
+                        <p>
+                            <%= userdata.totalexperience %>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <h4><b>work experience</b></h4>
+                        <p>
+                            <%= userdata.workexperience %>
+                        </p>
+                    </div>   
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

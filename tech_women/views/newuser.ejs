@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            margin: 0;
+    padding: 0;
+    background-image: url("https://miro.medium.com/max/1400/0*iZRVYQGKPYLD1uQk");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    background-size: cover;
+    }
+        
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+        
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            background-color: #4d4dff;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #3333ff;
+        }
+    </style>
+</head>
+
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <div class="w3-bar w3-black">
+        <!--<p class="w3-bar-item">PRANAV DATA</p>-->
+        <a href=" # " class="w3-bar-item w3-button w3-xlarge" style="width:16% ">WOMEN IN TECH</a>
+    </div>
+    <div class="buttons-container">
+        <form method="get" action="/oncandidate" id="candidate">
+            <button type="submit" value="Submit" class="button"><a>candidate</a></button>
+        </form>
+        <form method="get" action="/onadminreg" id="recruiter">
+            <button type="submit" value="Submit" class="button"><a>recruiter</a></button>
+        </form>
+    </div>
+</body>
+
+</html>
